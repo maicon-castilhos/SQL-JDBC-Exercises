@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
@@ -20,5 +21,10 @@ public class Main {
         System.out.println("=== TESTE 1: Seller findById ===");
         Seller seller = sellerDao.findById(3);
         System.out.println(seller);
+        System.out.println("\n=== TESTE 2: Seller findByDepartment ===");
+        List<Seller> sellerList = sellerDao.findByDepartment(new Department(2, null));
+        for (Seller sell : sellerList) {
+            System.out.println(sell);
+        }
     }
 }

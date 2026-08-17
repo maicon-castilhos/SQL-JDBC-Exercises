@@ -35,7 +35,7 @@ public class Department implements Serializable {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Department that = (Department) o;
-        return Objects.equals(id, that.id);
+        return Objects.equals(id, id);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class Department implements Serializable {
 
     @Override
     public String toString() {
-        return "Department id: " + id + ", name: " + name;
+        return new StringBuilder().append("Department id: ").append(id).append(", name: ").append(name).toString();
     }
 
 }
