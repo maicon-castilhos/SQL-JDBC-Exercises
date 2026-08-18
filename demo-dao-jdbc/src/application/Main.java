@@ -34,5 +34,11 @@ public class Main {
         for (Seller sell : listAll) {
             System.out.println(sell);
         }
+
+        System.out.println("\n=== TESTE 4: Seller insert ===");
+        Department dep = new Department(2, null);
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, dep);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New Seller ID: " + newSeller.getId());
     }
 }
