@@ -53,7 +53,9 @@ public class Main {
 
         System.out.println("Updated! New email: " + sellerToUpdate.getEmail());
 
-        System.out.println("\n=== TESTE 6: Seller delet ===");
+        System.out.println("\n=== TESTE 6: Seller deleted ===");
+        sellerDao.deleteById(10);
+        System.out.println("User Deleted!");
 
     }
 }
