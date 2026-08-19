@@ -40,5 +40,20 @@ public class Main {
         Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, dep);
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New Seller ID: " + newSeller.getId());
+
+        System.out.println("\n=== TESTE 5: Seller update ===");
+        Seller sellerToUpdate = sellerDao.findById(6);
+        System.out.println("Email atual: " + sellerToUpdate.getEmail());
+
+        sellerToUpdate.setEmail("alex_2@gmail.com");
+        sellerDao.update(sellerToUpdate);
+
+        Seller confirmacao = sellerDao.findById(6);
+        System.out.println(confirmacao);
+
+        System.out.println("Updated! New email: " + sellerToUpdate.getEmail());
+
+        System.out.println("\n=== TESTE 6: Seller delet ===");
+
     }
 }
